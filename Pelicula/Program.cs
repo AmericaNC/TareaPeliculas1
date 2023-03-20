@@ -23,12 +23,21 @@ namespace Pelicula
         public string Titulo { 
             get {return titulo;}
             set {titulo = value;}
-        }
+            }
          public Int16 Año { 
             get {return año;}
             set {año = value;}
-        }  
-        
+            }  
+         public Pelicula(string Titulo, Int16 Año) {
+            this.Titulo = Titulo;
+            this.Año = Año;
+            }
+        public Pelicula() {
+
+            }
+        public void Imprime() {
+          Console.WriteLine($"{Titulo} ({Año})");
+            }
         }
          /*
         public Pelicula(string titulo, string pais, Int16 año, string director){
@@ -40,10 +49,7 @@ namespace Pelicula
         //Métodos
         
 
-        public void Imprime()
-        {
-          Console.WriteLine($"{Titulo} ({Año})");
-        }
+       
 
 
    

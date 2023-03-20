@@ -14,20 +14,39 @@ namespace Pelicula
         //private List<Actor> actores = new List<Actor>();
 
         //Constructores
+        public Int16 GetAño(){return año;}
+
+        public void SetAño(Int16 a){año = a;}
+        public string GetTitulo(){return Titulo;}
+
+        public void SetTitulo(string t){Titulo = t;}
+        public string Titulo { 
+            get {return titulo;}
+            set {titulo = value;}
+        }
+         public Int16 Año { 
+            get {return año;}
+            set {año = value;}
+        }  
+        
+        }
+         /*
         public Pelicula(string titulo, string pais, Int16 año, string director){
         this.titulo = titulo;
         this.pais = pais;
         this.año = año;
         this.director = director;
-        }
+        } 
         //Métodos
+        
+
         public void Imprime()
         {
-          Console.WriteLine($"{titulo} ({año})");
+          Console.WriteLine($"{Titulo} ({Año})");
         }
 
 
-    }
+   
     /*
     public class Actor
     {
@@ -49,11 +68,16 @@ namespace Pelicula
     class Program
     {
         static void Main(string[] args)
-        {
+        { 
+           Pelicula p1 = new Pelicula();
+           p1.SetTitulo("La La Land");
+           p1.SetAño(2016);
+           Console.WriteLine("{0}({1})", p1.GetTitulo(), p1.GetAño());
+           /*
            Pelicula p1 = new Pelicula("Parasitos","Corea del Sur",2019,"Bong Joon-ho");
            p1.Imprime();
            Pelicula p2 = new Pelicula("Green Book","EUA",2019,"Peter Farrelly");
-           p2.Imprime();
+           p2.Imprime(); */
         }
     }
 }

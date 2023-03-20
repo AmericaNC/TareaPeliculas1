@@ -7,21 +7,28 @@ namespace Pelicula
     public class Pelicula
     {
         //Campos
-        private List<Actor> actores = new List<Actor>();
+        public string titulo;
+        public string pais;
+        public Int16 año;
+        public string director;
+        //private List<Actor> actores = new List<Actor>();
 
         //Constructores
-     
+        public Pelicula(string titulo, string pais, Int16 año, string director){
+        this.titulo = titulo;
+        this.pais = pais;
+        this.año = año;
+        this.director = director;
+        }
         //Métodos
-     
         public void Imprime()
         {
-     //       Console.WriteLine($"{titulo} ({año})");
-
+          Console.WriteLine($"{titulo} ({año})");
         }
 
 
     }
-
+    /*
     public class Actor
     {
         //Propiedades
@@ -38,14 +45,15 @@ namespace Pelicula
 
     // Puedes probar tu código en Main() pero lo importante
     // es que pase las pruebas
-
+    */
     class Program
     {
-
-
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
+           Pelicula p1 = new Pelicula("Parasitos","Corea del Sur",2019,"Bong Joon-ho");
+           p1.Imprime();
+           Pelicula p2 = new Pelicula("Green Book","EUA",2019,"Peter Farrelly");
+           p2.Imprime();
         }
     }
 }

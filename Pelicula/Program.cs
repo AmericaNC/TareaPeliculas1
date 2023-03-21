@@ -108,6 +108,7 @@ namespace Pelicula
         p1.AgregaActor(new Actor("Emma Stone", 1988));
         p1.ImprimeActores();
             /*
+            Lista peliculas
         List<Pelicula> peliculas = new List<Pelicula>();
         
         peliculas.Add(new Pelicula() { Titulo = "La La Land", año = 2016 });
